@@ -32,12 +32,12 @@
     console.log(car)
 
     //Funcao que permite ver o nome no console log
-    //Usando let dentro de uma funcão
-    function name(){
-        let name = 'Jennifer';
+    //Usando const em uma função e depois chamando ela  fora da mesma
+    const helloName = function name(){
+        let name = 'Marlon';
         console.log(name)
     }
-    name()
+    helloName();
     </script>
     
 </body>
