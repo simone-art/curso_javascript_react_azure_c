@@ -6,6 +6,19 @@
   </head>
   <body>
     <script>
+
+     // O this dentro da funcao neste caso não funciona no console.log
+     //Pra ver o nome, deve-se usar o person.name
+      const person = {
+        name: 'Lenny Kravitz',
+        walk: function(){
+         console.log(this);
+        },
+        walkAction: function(){
+         console.log(this);
+        }
+      }
+      console.log(person.name)
       
     </script>
   </body>
