@@ -10,15 +10,20 @@
       const values = {
         firstNumber: 10,
         secondNumber: 20,
-
+        // O uso do this neste caso faz referéncia ao objeto. 
+        //O This dentro de uma função é referente a objeto. 
+        //Fora da funcao, o this se refere a o objeto global do windows. 
         showValues: function() {
           return `Primeiro numero: ${this.firstNumber} Segundo numero: ${this.secondNumber}`
         },
+        //Colocar o this.showvalues, dentro de uma funcao que chama outra, 
+        //mostrará os parámetros e valores setados
         callShowValues: function() {
           console.log(this.showValues())
         }  
       }
-
+      // O querySelector só vai pegar o primeiro elemento
+      //Se quiser pegar vários elementos, deve-se usar o querySelectorAll
       const btn = document.querySelector('.btn')
       btn.addEventListener('click', function() {
         values.callShowValues()
