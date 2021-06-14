@@ -7,6 +7,11 @@
   <body>
     <script>
 
+     //Definindo uma função 
+     function sum(){
+       console.log(this);
+     }
+     //Definindo uma função dentro de uma constante
      // O this dentro da funcao neste caso não funciona no console.log
      //Pra ver o nome, deve-se usar o person.name
       const person = {
@@ -15,10 +20,13 @@
          console.log(this);
         },
         walkAction: function(){
-         console.log(this);
+         console.log(this.walk());
         }
       }
       console.log(person.name)
+      //Chamando funções
+      person.walkAction();
+      sum();
       
     </script>
   </body>
