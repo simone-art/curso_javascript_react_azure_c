@@ -16,26 +16,30 @@
     
     <script>
       const person = {
-        name: 'Maycon',
-        lastName: 'Alves'
+        name: 'Simone',
+        lastName: 'Santos'
       }
 
-      const courses = ['Javascript', 'Java', 'Python', 'Ruby', 'Go']
-
       const personData = `My name is ${person.name} and my lastname is ${person.lastName}`
-
       console.log(personData)
 
+      const courses = ['Javascript', 'Java', 'Python', 'Ruby', 'Go']
+      //const coursesLanguages = ['English', 'Spanish', 'French', 'Arabic', 'Portuguesse']
+      
+      //Tag template permite colocar em um só lugar o que voce deseja
       const tagTemplate = `
         <ul>
           ${
               courses.map(course => `<li>${course}</li>`).join(' ')
+              //coursesLanguages.map(Language => `<li>${Language}</li>`).join(' ')
             }
         </ul>
       `
 
+       //innerHTML propiedade que permite pegar um valor e que apareça onde voce quiser
       const body = document.querySelector('div')
-      body.innerHTML = tagTemplate
+      body.innerHTML = tagTemplate;
+
     </script>
   </body>
   
