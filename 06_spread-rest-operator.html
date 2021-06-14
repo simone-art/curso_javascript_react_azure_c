@@ -2,27 +2,35 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Default parameters</title>
+    <title>Spread Rest Operator</title>
   </head>
   <body>
     <script>
+      //O spread rest são os tres pontos antes de uma constante
+      //Ela concatena arrays e strings
+      //Com o uso do spread se escreve menos código
+      //Spread operator : só funciona com coisas iteraveís
+
+      //Neste caso, no array numbers vao aparecer no console os números: 6, 7, e 8
       const numbers = [1, 2, 3, 4, 5]
 
       console.log([...numbers, 6, 7, 8])
 
+      //Aparece o nome no console separado
       const name = 'Maycon'
 
       console.log(...name)
 
+      //No console, você chama a função e depois a constante e vai aparecer o resultado = 30
       function sum(firstNumber, secondNumber) {
         return firstNumber + secondNumber
       }
 
-      const number = [1, 2]
+      const number = [10, 20]
 
       console.log(sum(...number))
 
-
+     //No console vai aparecer o resultado da multiplicação de cada index do array
       function multiply(...numbers) {
         const arr = numbers.map(number => number * 2)
         return arr
