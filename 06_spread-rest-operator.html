@@ -35,8 +35,22 @@
         const arr = numbers.map(number => number * 2)
         return arr
       }
-
       console.log(multiply(1, 2, 3, 4, 5))
+
+     //O uso do spread permite juntar informações entre objetos
+      const artist1 = {
+        name: 'Sia', 
+        music: 'Chandelier'
+      }
+
+      const awardsArtist = {
+        ...artist1,
+        Awards: 'Grammys'
+      }
+      
+      const joinArtist = {...artist1, ...awardsArtist};
+      console.log("Artist", joinArtist)
+      
     </script>
   </body>
 </html>
