@@ -16,15 +16,14 @@
       showValues: function(){
         return `Primeiro Numero: ${this.firstNumber}  Segundo Numero: ${this.secondNumber}`
       }, 
-      //Somente o this aqui vai printar no console o objeto windown a cada 2000 milisegundos
+      //Usando arrow function ao invés de function, a function callShowValues consegue chamar 
+      //A função showValues pra printar no console os valores de FirtsNumber e SecondNumber
       callShowValues: function(){
-        window.setTimeout(function() {
-          //console.log(this.showValues());
+        window.setTimeout(() => {
+        console.log(this.showValues());
         }, 2000)
       }
     }
-
-
       //querySelector é uma especie de buscador de um elemento
       //Por padrão, ele só busca o primeiro
       //Se quiser pegar todos os elementos, deve-se usar o querySelectorAll
