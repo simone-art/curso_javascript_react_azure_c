@@ -7,36 +7,54 @@
   <body>
     <script>
       //Este trecho de código funciona no console log
+      //Valores setados diretamente na class
       class Person {
         constructor(name) {
-          this.name = name
+          this.name = "Simone";
         }
 
         hello() {
           console.log(`Welcome ${this.name}`)
         }
+        
       }
       
       //Este trecho de código funciona no console log
+      //Valores setados diretamente na class que herda as características de Person
       class Age extends Person {
         constructor(name, age) {
           super(name)
-          this.name = name
-          this.age = age
-        }
-        
-        showAge() {
-          console.log(`Hello ${this.name} your age is: ${this.age}`)
+          this.name = "Simone";
+          this.age = "30";
         }
       }
-    
+      //Este trecho de código funciona no console log
+      //const maycon = new Person('Maycon')
+      //console.log(maycon)
+      //const mayconAge = new Age('Maycon', '30')
+      //console.log(mayconAge)
 
-      const maycon = new Person('Maycon')
-      console.log(maycon)
-      const mayconAge = new Age('Maycon', '30')
-      console.log(mayconAge)
+      //Pra funcionar a class tem que ser salvada numa variável
+      const name = new Person();
+      console.log(name)
+      const agePerson = new Age();
+      console.log(agePerson)
       
+      //Tem que se ter muito cuidado ao definir as variáveis com nomes parecidos 
+      //Porque nao vai mostrar no console. Eu tinha uma variável AgePerson na funcao e como tenho
+      //Outra variável parecida, ela não estava pegando o valor e aparecia como undefined
+      //Ao trocar por personAge, no console apareceu o valor setado. 
+      const dataPerson = {
+        namePerson: 'Caio',
+        personAge: 10
+      }
+      
+      function showNameAndAge() {
+          return `Hello ${dataPerson.namePerson} your age is: ${dataPerson.personAge}`
+        }
+        console.log(showNameAndAge());
+          
+     
     </script>
   </body>
 </html>
-
