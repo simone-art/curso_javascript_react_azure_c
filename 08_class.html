@@ -6,6 +6,7 @@
   </head>
   <body>
     <script>
+      //Este trecho de código funciona no console log
       class Person {
         constructor(name) {
           this.name = name
@@ -15,21 +16,26 @@
           console.log(`Welcome ${this.name}`)
         }
       }
-
+      
+      //Este trecho de código funciona no console log
       class Age extends Person {
         constructor(name, age) {
           super(name)
           this.name = name
           this.age = age
         }
-
+        
         showAge() {
           console.log(`Hello ${this.name} your age is: ${this.age}`)
         }
       }
+    
 
       const maycon = new Person('Maycon')
+      console.log(maycon)
       const mayconAge = new Age('Maycon', '30')
+      console.log(mayconAge)
+      
     </script>
   </body>
 </html>
