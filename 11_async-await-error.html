@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Async await Error</title>
+    <title>Async await with Error</title>
   </head>
   <body>
     <script>
@@ -10,6 +10,8 @@
         try {
         const repositorys = await fetch('https://api.github.com/users/mayconbalves/repos?per_page=50')
         const data = await repositorysss.json()
+        // Usando catch pra pegar possível erros na hora de fazer a requisição
+        // O erro está no repositorysss.json- o correto é repositorys
         } catch (err) {
           console.error('Ops', err)
         }
