@@ -6,6 +6,9 @@
   </head>
   <body>
     <script>
+      //Async Await é baseado em promises
+      // A diferença entre Async await e promises e que na primeira você indica que a função é assíncrona
+      // Assíncrona: resposta não é recebida inmediatamente
       async function getRepository() {
         const repositorys = await fetch('https://api.github.com/users/mayconbalves/repos?per_page=50')
         const data = await repositorys.json()
